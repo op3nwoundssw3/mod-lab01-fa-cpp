@@ -1,6 +1,12 @@
 // Copyright 2022 UNN-IASR
+#include <iostream>
+#include <cmath>
+#include <iostream>
 #include "fun.h"
+#include <cmath>
 
 int main() {
+    const char* s = "hello world";
+    std::cout << faStr3(s) << std::endl;
     return 0;
 }
