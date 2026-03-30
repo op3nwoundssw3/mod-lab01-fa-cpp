@@ -1,12 +1,11 @@
 // Copyright 2022 UNN-IASR
 #include <iostream>
-#include <cmath>
-#include <iostream>
 #include "fun.h"
-#include <cmath>
 
 int main() {
-    const char* s = "hello world";
-    std::cout << faStr3(s) << std::endl;
+    const char* str = "Hello world123 raz dva vanek9423423";
+    std::cout << faStr1(str) << "\n";
+    std::cout << faStr2(str) << "\n";
+    std::cout << faStr3(str) << "\n";
     return 0;
 }
