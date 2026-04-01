@@ -1,6 +1,7 @@
 // Copyright 2022 UNN-IASR
 #include <cmath>
 #include "../include/fun.h"
+
 unsigned int faStr1(const char* str) {
     if (str == nullptr || str[0] == '\0')
         return 0;
@@ -11,8 +12,7 @@ unsigned int faStr1(const char* str) {
     while (str[l] != '\0') {
         if (str[l] == ' ') {
             l++;
-        }
-        else {
+        } else {
             bool hasDigit = false;
 
             while (str[l] != ' ' && str[l] != '\0') {
@@ -41,8 +41,7 @@ unsigned int faStr2(const char* str) {
     while (str[l] != '\0') {
         if (str[l] == ' ') {
             l++;
-        }
-        else {
+        } else {
             bool itsokay = true;
 
             if (!(str[l] >= 'A' && str[l] <= 'Z')) {
@@ -86,8 +85,7 @@ unsigned int faStr3(const char* str) {
                 inWord = true;
                 countword++;
             }
-        }
-        else {
+        } else {
             inWord = false;
         }
         l++;
@@ -96,6 +94,7 @@ unsigned int faStr3(const char* str) {
     if (countword == 0)
         return 0;
 
-    unsigned int rez = std::round((double)countsymbol / countword);
+    // Исправление: используем static_cast вместо C-style cast
+    unsigned int rez = std::round(static_cast<double>(countsymbol) / countword);
     return rez;
 }
