@@ -1,5 +1,6 @@
 // Copyright 2022 UNN-IASR
-#include "fun.h"
+#include <cmath>
+#include "../include/fun.h"
 unsigned int faStr1(const char* str) {
     if (str == nullptr || str[0] == '\0')
         return 0;
